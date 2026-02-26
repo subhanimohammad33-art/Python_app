@@ -16,3 +16,5 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag py_sub_app:$(date +%s)
+    - name: Pull public Docker image
+      run: docker pull ubuntu:latest
